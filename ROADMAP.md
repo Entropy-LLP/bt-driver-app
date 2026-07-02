@@ -5,7 +5,7 @@
 
 **Role:** The **primary audience's** app (optimize for near-zero friction; users may be non-literate → icon-led, vernacular-ready). Combined Driver + Fleet Owner persona — role is truck-derived. Web/PWA now → **Capacitor Android** for native background GPS before the real pilot.
 
-**Status legend:** ✅ done · 🟡 partial · ⬜ to do · ⛔ broken
+**Status legend:** ✅ done · 🟡 partial · ⬜ to do · ⛔ broken · `(Wx-y)`/`(D-z)` tags = Entropy PMO work-item refs (auto-synced to the tracker — keep them on the line when you flip a checkbox)
 
 ---
 
@@ -22,17 +22,21 @@
 - ⛔ GPS not field-ready: no wake-lock, no background/store-forward; single in-component watch dies on background/lock; push failures swallowed.
 
 ## ⬜ To do (MVP / P0)
-- ⬜ **Fix the build:** define/export the missing onboarding api fns + types (or rewire onboarding to the working data path).
-- ⬜ **One coherent driver-KYC path** — connect onboarding (personal/vehicle/license/insurance/bank/review) into the live journey (`is_new_user` routing) against bt-auth-service.
-- ⬜ **Truck & fleet management:** add truck (RC→Vahan), see role flip to Fleet Owner on 2nd truck, affiliate drivers, see assigned fleet trucks.
-- ⬜ **Field-ready GPS:** wake-lock + IndexedDB store-and-forward queue + reconnect (web PWA).
-- ⬜ **Trip execution:** pickup confirm, checkpoint photo capture (EXIF GPS) → bt-cargo-ledger, deep-link nav to Google Maps, delivery via receiver OTP.
-- ⬜ **Payout/bank** link in a working path (currently only in the broken wizard) + earnings view (advance + balance).
-- ⬜ Remove dev seams from production login ("Dev: paste JWT", "check server console for OTP").
-- ⬜ Fix `my-quotes` N+1 fan-out (shows only first quote per booking).
+- ⬜ **Fix the build:** define/export the missing onboarding api fns + types (or rewire onboarding to the working data path). (W1-2)
+- ⬜ **One coherent driver-KYC path** — connect onboarding (personal/vehicle/license/insurance/bank/review) into the live journey (`is_new_user` routing) against bt-auth-service. (W2-12)
+- ⬜ **Truck & fleet management:** add truck (RC→Vahan), see role flip to Fleet Owner on 2nd truck, affiliate drivers, see assigned fleet trucks. (W2-13)
+- ⬜ **Field-ready GPS:** wake-lock + IndexedDB store-and-forward queue + reconnect (web PWA). (W5-5)
+- ⬜ **Trip execution:** pickup confirm, checkpoint photo capture (EXIF GPS) → bt-cargo-ledger, deep-link nav to Google Maps, delivery via receiver OTP. (W6-15)
+- ⬜ **Payout/bank** link in a working path (currently only in the broken wizard) + earnings view (advance + balance). (W6-16)
+- ⬜ Remove dev seams from production login ("Dev: paste JWT", "check server console for OTP"). (W8-3)
+- ⬜ Fix `my-quotes` N+1 fan-out (shows only first quote per booking). (W3-12)
+- ⬜ Assisted-KYC field-agent onboarding (agent capture + regional-language audio/video + dummy-order activation). (W2-15)
+- ⬜ Background-geolocation plugin (Transistorsoft) + OEM autostart/battery-whitelist onboarding for Xiaomi/Vivo/Oppo/Realme. (W5-8)
+- ⬜ Vernacular pass: Hindi-first UI + regional languages + voice prompts for key confirmations. (W8-7)
+- ⬜ Document wallet: surface DL/RC/PUC/insurance/permit from KYC data with expiry alerts. (W8-8)
 
 ## ⬜ To do (P0* for real pilot)
-- ⬜ **Capacitor Android wrap** for native background GPS (use a battle-tested geolocation plugin; handle OEM battery-killers). _Web screen-on is acceptable for the very first feasibility trip._
+- ⬜ **Capacitor Android wrap** for native background GPS (use a battle-tested geolocation plugin; handle OEM battery-killers). _Web screen-on is acceptable for the very first feasibility trip._ (W8-1)
 
 ## 🔮 Deferred / out of MVP
 - Supabase Auth migration (keep custom JWT); driver insights (petrol pumps/fuel); ratings (fleet reviews only).
